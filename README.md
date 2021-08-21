@@ -1,5 +1,6 @@
 # Algorithm-Practice
-##Algorithm practice with C++
+Algorithm practice with C++
+----------
 <hr>
 * Graph Searching algorithm
   * BFS
