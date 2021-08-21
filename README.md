@@ -1,13 +1,14 @@
 # Algorithm-Practice
-Algorithm practice with C++
-----------
+Breif : Algorithm practice with C++
 <hr>
+
 * Graph Searching algorithm
   * BFS
   * DFS
   * Union-find
   * Kruskal
 <hr>
+
 * Sorting algorithm
   * insertion sort
   * selection sort
