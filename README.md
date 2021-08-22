@@ -1,5 +1,5 @@
 # Algorithm-Practice
-Breif : Algorithm practice with C++
+Brief : Algorithm practice with C++
 <hr>
 
 * Graph Searching algorithm
