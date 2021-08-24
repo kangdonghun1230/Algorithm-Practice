@@ -19,4 +19,8 @@ Brief : Algorithm practice with C++
   * couting sort
   * STL sort()
 <hr>
+
+* Dynamic Programming
+
+<hr>
 2021/08/16 ~
