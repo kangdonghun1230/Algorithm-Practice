@@ -1,5 +1,6 @@
 # Algorithm-Practice
-Brief : Algorithm practice with C++
+Brief : Algorithm practice with C++<br>
+\+ problem solving
 <hr>
 
 * Graph Searching algorithm
