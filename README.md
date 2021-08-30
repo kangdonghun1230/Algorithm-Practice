@@ -8,6 +8,8 @@ Brief : Algorithm practice with C++<br>
   * DFS
   * Union-find
   * Kruskal
+  * Topology Sort
+  * Binary Tree (traversal)
 <hr>
 
 * Sorting algorithm
