@@ -8,6 +8,8 @@ Brief : Algorithm practice with C++<br>
   * DFS
   * Union-find
   * Kruskal
+  * Topology Sort
+  * Binary Tree (traversal)
 <hr>
 
 * Sorting algorithm
@@ -24,4 +26,14 @@ Brief : Algorithm practice with C++<br>
 * Dynamic Programming
 
 <hr>
+
+* Find shortest path
+  * Dijkstra
+  * Floyd Warshall
+<hr>
+
+* Find prime number
+  * Sieve of Eratosthenes
+<hr>
+
 2021/08/16 ~
