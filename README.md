@@ -10,7 +10,7 @@ Brief : Algorithm practice with C++<br>
   * Kruskal
   * Topology Sort
   * Binary Tree (traversal)
-  * Netwrok flow
+  * Network flow
 <hr>
 
 * Sorting algorithm
