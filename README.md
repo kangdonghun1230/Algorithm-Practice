@@ -37,4 +37,7 @@ Brief : Algorithm practice with C++<br>
   * Sieve of Eratosthenes
 <hr>
 
+* Pattern(string) matching
+<hr>
+
 2021/08/16 ~
