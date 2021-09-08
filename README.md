@@ -38,6 +38,8 @@ Brief : Algorithm practice with C++<br>
 <hr>
 
 * Pattern(string) matching
+ * Simple pattern matching
+ * KMP
 <hr>
 
 2021/08/16 ~
