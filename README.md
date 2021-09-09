@@ -1,6 +1,6 @@
 # Algorithm-Practice
 Brief : Algorithm practice with C++<br>
-\+ problem solving
+\+ problem solving code (C++)
 <hr>
 
 * Graph Searching algorithm
@@ -40,6 +40,7 @@ Brief : Algorithm practice with C++<br>
 * Pattern(string) matching
   * Simple pattern matching
   * KMP
+  * Rabin-Karp
 <hr>
 
 2021/08/16 ~
