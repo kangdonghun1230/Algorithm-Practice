@@ -6,11 +6,16 @@ Brief : Algorithm practice with C++<br>
 * Graph Searching algorithm
   * BFS
   * DFS
-  * Union-find
   * Kruskal
-  * Topology Sort
+  
+<hr>
+
+* Graph Theory
+  * Union-find
+  * Topology sort
   * Binary Tree (traversal)
   * Network flow
+  * Bipartite matching
 <hr>
 
 * Sorting algorithm
