@@ -48,4 +48,7 @@ Brief : Algorithm practice with C++<br>
   * Rabin-Karp
 <hr>
 
+* Greedy algorithm
+<hr>
+
 2021/08/16 ~
