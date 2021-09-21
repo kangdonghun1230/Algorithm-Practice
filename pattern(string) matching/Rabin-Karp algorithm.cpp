@@ -17,6 +17,7 @@ void rabinKarp(string parent, string pattern) {
 	for (int i = 0; i <= parentSize - patternSize; i++) {
 		if (i == 0) {
 			for (int j = 0; j < patternSize; j++) {
+				// index(patternSize - 1) means last element of pattern string (sub parent string)
 				parentHash += parent[patternSize - 1 - j] * pow;
 				patternHash += pattern[patternSize - 1 - j] * pow;
 				// Do not multipy 2 to pow at last because we will keep using this value.
@@ -24,7 +25,7 @@ void rabinKarp(string parent, string pattern) {
 			}
 		}
 		else {
-			// new parent hash = 2 * (original parent hash - new element * pow) - original first element
+			// new parent hash = 2 * (original parent hash - original first element * pow) - new element
 			parentHash = 2 * (parentHash - parent[i - 1] * pow) + parent[i + patternSize - 1];
 		}
 
