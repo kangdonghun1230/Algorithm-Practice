@@ -1,5 +1,5 @@
 # Algorithm-Practice
-Brief : Algorithm practice with C++<br>
+Brief : Algorithm practice with C++:+1::+1:<br>
 \+ problem solving code (C++)
 <hr>
 
