@@ -14,3 +14,7 @@ LCA algorithm은 이름 그대로 최소 공통 조상을 찾는 알고리즘입
 5. 4번 과정의 결과로 두 노드는 공통 조상의 바로 아래의 자식이 되고, 두 노드 중 하나의 2^0 th node를 return합니다. (return parent[x][0])
 
 2^i th parent에 대한 정보를 미리 setting한 후 탐색을 통해 공통 조상 노드를 찾는 알고리즘이기 때문에, O(lgN)의 time complexity를 갖는 algorithm입니다.
+
+- Reference
+   - https://blog.naver.com/PostView.naver?blogId=ndb796&logNo=221282478466&parentCategoryNo=&categoryNo=128&viewDate=&isShowPopularPosts=false&from=postList
+   - https://www.crocus.co.kr/660
