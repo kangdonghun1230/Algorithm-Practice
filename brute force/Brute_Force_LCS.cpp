@@ -16,28 +16,57 @@ vector<string> subSet;
 	function name : DFS
 	brief : This function makes subset of sequence X
 	if X's length is m, this function makes 2^m subsets
+	argument : 
+	idx means the index of string
+	XorY true = X, false = Y
 	return : void
 */
-void DFS(int idx) {
-	if (idx == n) {
-		string str;
-		for (int i = 0; i < n; i++) {
-			if (ch[i] == 1)
-				str += strX[i];
+void DFS(int idx, bool XorY) {
+	if (XorY) {
+		// X is shorter than Y
+		if (idx == n) {
+			string str;
+			for (int i = 0; i < n; i++) {
+				if (ch[i] == 1)
+					str += strX[i];
+			}
+			// push subset to subSet vector
+			subSet.push_back(str);
+			cout << str << endl;
+			return;
 		}
-		// push subset to subSet vector
-		subSet.push_back(str);
-		cout << str << endl;
-		return;
+		else {
+			// case1: ch[idx] = 1
+			ch[idx] = 1;
+			DFS(idx + 1, XorY);
+			// case2: ch[idx] = 0
+			ch[idx] = 0;
+			DFS(idx + 1, XorY);
+			return;
+		}
 	}
 	else {
-		// case1: ch[idx] = 1
-		ch[idx] = 1;
-		DFS(idx + 1);
-		// case2: ch[idx] = 0
-		ch[idx] = 0;
-		DFS(idx + 1);
-		return;
+		// Y is shorter than X
+		if (idx == m) {
+			string str;
+			for (int i = 0; i < m; i++) {
+				if (ch[i] == 1)
+					str += strY[i];
+			}
+			// push subset to subSet vector
+			subSet.push_back(str);
+			cout << str << endl;
+			return;
+		}
+		else {
+			// case1: ch[idx] = 1
+			ch[idx] = 1;
+			DFS(idx + 1, XorY);
+			// case2: ch[idx] = 0
+			ch[idx] = 0;
+			DFS(idx + 1, XorY);
+			return;
+		}
 	}
 }
 /*
@@ -47,17 +76,21 @@ void DFS(int idx) {
 	find the LCS with maxLength and finally print the result(LCSs)
 	return : void
 */
-void getLCS(void) {
+void getLCS(bool XorY) {
 	int maxLength = 0;
 	vector<string> result;
+	string sequence;
+	// select the string
+	if (XorY) sequence = strY;
+	else sequence = strX;
 
 	// get the length of LCS
 	for (int i = 0; i < subSet.size(); i++) {
 		string str = subSet[i];
 		int idx = 0;
 		// compare ith subset with strY (sequence Y)
-		for (int j = 0; j < strY.size(); j++) {
-			if (strY[j] == str[idx])
+		for (int j = 0; j < sequence.size(); j++) {
+			if (sequence[j] == str[idx])
 				idx++;
 		}
 		if (idx == str.length() && str.length() > maxLength) {
@@ -70,8 +103,8 @@ void getLCS(void) {
 		if (subSet[i].length() != maxLength) continue;
 		string str = subSet[i];
 		int idx = 0;
-		for (int j = 0; j < strY.size(); j++) {
-			if (strY[j] == str[idx])
+		for (int j = 0; j < sequence.size(); j++) {
+			if (sequence[j] == str[idx])
 				idx++;
 		}
 		if (idx == str.length()) {
@@ -89,16 +122,23 @@ void getLCS(void) {
 }
 
 int main() {
+	bool XorY;
 	cin >> strX >> strY;
 	// get the length of strX and strY
 	n = strX.length();
 	m = strY.length();
 
+	// set the XorY(select the sequence to find subset)
+	if (n > m) 
+		XorY = false; // we will find the subset of Y
+	else 
+		XorY = true; // we will find the subset of X
+
 	cout << "### subset of X ###" << endl;
-	DFS(0);
+	DFS(0, XorY);
 	cout << "number of subset : " << subSet.size() << endl;
 
-	getLCS();
-
+	getLCS(XorY);
+	cout << "### end of program ###" << endl;
 	return 0;
 }
