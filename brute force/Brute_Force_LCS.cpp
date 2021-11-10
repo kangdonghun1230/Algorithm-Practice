@@ -2,14 +2,15 @@
 #include <vector>
 #include <string>
 
-#define MAX 129 // 2 ^ 7 + 1
-
 using namespace std;
 
+// length of strX(m), strY(n)
 int n, m;
-int ch[11] = { 0 };
+// save the status of array
+int ch[10];
+// sequence X, Y
 string strX, strY;
-
+// get the subset of sequence (X or Y)
 vector<string> subSet;
 
 /*
@@ -19,20 +20,22 @@ vector<string> subSet;
 	argument : 
 	idx means the index of string
 	XorY true = X, false = Y
+	verbose true = print the subset string, false = print x
 	return : void
 */
-void DFS(int idx, bool XorY) {
+void DFS(int idx, bool XorY, bool verbose=false) {
 	if (XorY) {
 		// X is shorter than Y
-		if (idx == n) {
+		if (idx == m) {
 			string str;
-			for (int i = 0; i < n; i++) {
+			for (int i = 0; i < m; i++) {
 				if (ch[i] == 1)
 					str += strX[i];
 			}
 			// push subset to subSet vector
 			subSet.push_back(str);
-			cout << str << endl;
+			if(verbose)
+				cout << str << endl;
 			return;
 		}
 		else {
@@ -47,9 +50,9 @@ void DFS(int idx, bool XorY) {
 	}
 	else {
 		// Y is shorter than X
-		if (idx == m) {
+		if (idx == n) {
 			string str;
-			for (int i = 0; i < m; i++) {
+			for (int i = 0; i < n; i++) {
 				if (ch[i] == 1)
 					str += strY[i];
 			}
@@ -76,7 +79,7 @@ void DFS(int idx, bool XorY) {
 	find the LCS with maxLength and finally print the result(LCSs)
 	return : void
 */
-void getLCS(bool XorY) {
+void getLCS(bool XorY, bool verbose=true) {
 	int maxLength = 0;
 	vector<string> result;
 	string sequence;
@@ -112,10 +115,12 @@ void getLCS(bool XorY) {
 		}
 	}
 
-	cout << "max length : " << maxLength << endl;
-	cout << "LCS : \n";
-	for (int i = 0; i < result.size(); i++) {
-		cout << result[i] << "\n";
+	if (verbose) {
+		cout << "LCS length : " << maxLength << endl;
+		cout << "LCS : \n";
+		for (int i = 0; i < result.size(); i++) {
+			cout << result[i] << "\n";
+		}
 	}
 
 	return;
@@ -125,19 +130,21 @@ int main() {
 	bool XorY;
 	cin >> strX >> strY;
 	// get the length of strX and strY
-	n = strX.length();
-	m = strY.length();
+	m = strX.length();
+	n = strY.length();
 
 	// set the XorY(select the sequence to find subset)
-	if (n > m) 
+	if (m > n) 
 		XorY = false; // we will find the subset of Y
 	else 
 		XorY = true; // we will find the subset of X
 
+	// print the result
 	cout << "### subset of X ###" << endl;
+	// call DFS (get the subset of sequence)
 	DFS(0, XorY);
 	cout << "number of subset : " << subSet.size() << endl;
-
+	// call getLCS (get the LSC of two sequences) and print LCSs
 	getLCS(XorY);
 	cout << "### end of program ###" << endl;
 	return 0;
