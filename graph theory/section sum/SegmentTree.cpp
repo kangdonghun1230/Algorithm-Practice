@@ -1,3 +1,10 @@
+/*
+	Date: 2021/11/14
+	Brief:
+	Segment Tree is the structure get the sum
+	of particular section in tree array
+	Reference: https://blog.naver.com/ndb796/221282210534
+*/
 #include <iostream>
 #include <vector>
 #define NUMBER 12
@@ -8,29 +15,39 @@ using namespace std;
 int a[] = { 1, 9, 3, 8, 4, 5, 5, 9, 10, 3, 4, 5 };
 int tree[4 * NUMBER]; // 현재 예제에서는 전체 element 개수에 4배 만큼이면 모든 범위를 커버할 수 있습니다.
 
-// initialize tree array (모든 범위에 대한 합을 가지는 tree structure)
+// initialize tree array (tree structure which have the whole section sum informations)
 int init(int start, int end, int node) {
 	if (start == end) return tree[node] = a[start];
 	int mid = (start + end) / 2;
-	// 재귀적으로 두 부분으로 나눈 후 그 합을 자시 자신으로 한다.
+	// divide current to two sub problems (left child + right child)
 	return tree[node] = init(start, mid, node * 2) + init(mid + 1, end, node * 2 + 1);
 }
-
+/*
+	function name: sum
+	brief:
+	Get the section sum of start ~ end
+	left, right mean the range of section which we want to
+	get the sum of this area
+*/
 int sum(int start, int end, int node, int left, int right) {
-	// 범위 밖
+	// out of range
 	if (left > end || right < start) return 0;
-	// 범위 내
+	// in the range, tree[node]'s value means the section sum of current left ~ right
 	if (left <= start && right >= end) return tree[node];
-	// 그렇지 않다면 두 부분으로 나누어 합을 구하기
+	// if not divide current problem into two sub problems
 	int mid = (start + end) / 2;
 	// left child + right child
 	return sum(start, mid, node * 2, left, right) + sum(mid + 1, end, node * 2 + 1, left, right);
 }
-
+/*
+	function name: update
+	brief:
+	update the tree with new element value
+*/
 void update(int start, int end, int node, int idx, int dif) {
-	// 범위 밖
+	// out of range
 	if (idx < start || idx > end) return;
-	// 범위 내면 내려가면서 다른 원소도 갱신해준다.
+	// In the range: initialize other nodes sliding down
 	tree[node] += dif;
 
 	if (start == end) return;
@@ -40,19 +57,18 @@ void update(int start, int end, int node, int idx, int dif) {
 }
 
 int main() {
-	// 구간 합 트리의 인텍스를 제외하고는 모두 인덱스 0부터 시작합니다. (구간 합 트리는 1부터)
-	// 구간 합 트리 initialization	
+	// except for SectionSum tree start from index 0 (SectionSum tree start from index 1)
+	// SectionSum tree initialization	
 	init(0, NUMBER - 1, 1);
 
-	// 구간 합 구하기
-	cout << "0부터 12까지의 합은: " << sum(0, NUMBER - 1, 1, 0, 12) << "\n";
-	// 구간 합 구하기
-	cout << "3부터 8까지의 합은: " << sum(0, NUMBER - 1, 1, 3, 8) << "\n";
-	// 구간 합 갱신하기
-	cout << "index 5의 원소를 -5만큼 수정\n";
+	// get the section sum of 0 ~ 12 elements
+	cout << "section sum of 0 ~ 12: " << sum(0, NUMBER - 1, 1, 0, 12) << "\n";
+	// get the section sum of 3 ~ 8 elements
+	cout << "section sum of 3 ~ 8: " << sum(0, NUMBER - 1, 1, 3, 8) << "\n";
+	// update the section sum information
+	cout << "update element5 -= 5\n";
 	update(0, NUMBER - 1, 1, 5, -5); // start, end, node, idx, dif
-	
-	// 갱신 후의 구간 합 구하기
+	// get the same section sum after update
 	cout << "3부터 8까지의 합은: " << sum(0, NUMBER - 1, 1, 3, 8) << "\n";
 
 	return 0;
