@@ -16,6 +16,9 @@ Brief : Algorithm practice with C++:+1::+1:<br>
   * Binary Tree (traversal)
   * Network flow
   * Bipartite matching
+  * Section sum
+    * Segment Tree
+    * Index Tree 
 <hr>
 
 * Sorting algorithm
