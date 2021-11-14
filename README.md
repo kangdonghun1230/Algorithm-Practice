@@ -55,4 +55,6 @@ Brief : Algorithm practice with C++:+1::+1:<br>
 * Greedy algorithm
 <hr>
 
+* Brute force
+<hr>
 2021/08/16 ~
