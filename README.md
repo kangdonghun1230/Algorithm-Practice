@@ -18,6 +18,7 @@ Brief : Algorithm practice with C++:+1::+1:<br>
   * Bipartite matching
   * Section sum
     * Segment Tree
+    * Segment Tree with lazy propagation
     * Index Tree 
 <hr>
 
