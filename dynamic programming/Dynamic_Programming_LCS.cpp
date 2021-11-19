@@ -53,7 +53,7 @@ int LCS_Length(string X, string Y, int i, int j) {
 	else if (c[i][j] != 0)
 		return c[i][j];
 	// last two elements are same
-	if (X[i] == Y[j]) {
+	if (X[i - 1] == Y[j - 1]) {
 		c[i][j] = LCS_Length(X, Y, i - 1, j - 1) + 1;
 	}
 	// last two elements are different
