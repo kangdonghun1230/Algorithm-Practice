@@ -35,6 +35,7 @@ Brief : Algorithm practice with C++:+1::+1:<br>
 
 * Dynamic Programming
   * Lowest Common Ancestor(LCA)
+  * Least Common Sequence(LCS) Dynamic programming version
 
 <hr>
 
@@ -57,5 +58,6 @@ Brief : Algorithm practice with C++:+1::+1:<br>
 <hr>
 
 * Brute force
+  * Least Common Sequence(LCS) Brute force version
 <hr>
 2021/08/16 ~
