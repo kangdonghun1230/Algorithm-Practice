@@ -6,6 +6,7 @@ Brief : Algorithm practice with C++:+1::+1:<br>
 * Graph Searching algorithm
   * BFS
   * DFS
+    * Back tracking 
   * Kruskal
   
 <hr>
