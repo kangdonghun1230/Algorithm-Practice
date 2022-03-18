@@ -3,11 +3,11 @@ Brief : Algorithm practice with C++:+1::+1:<br>
 \+ problem solving code (C++)
 <hr>
 
-* Graph Searching algorithm
-  * [BFS](./graph-searching-method/)
-  * DFS
+* [Graph Searching algorithm](./Graph_searching_method)
+  * [BFS](./Graph_searching_method/BFS.cpp)
+  * [DFS](./Graph_searching_method/DFS.cpp)
     * Back tracking 
-  * Kruskal
+  * [Kruskal](./Graph_searching_method/kruskalAlgorithm.cpp)
   
 <hr>
 
