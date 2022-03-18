@@ -4,7 +4,7 @@ Brief : Algorithm practice with C++:+1::+1:<br>
 <hr>
 
 * Graph Searching algorithm
-  * [BFS](./graph-searching-method/BFS.cpp)
+  * [BFS](./graph-searching-method/)
   * DFS
     * Back tracking 
   * Kruskal
