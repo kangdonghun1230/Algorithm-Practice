@@ -55,7 +55,7 @@ Brief : Algorithm practice with C++:+1::+1:<br>
   * Rabin-Karp
 <hr>
 
-* [Greedy algorithm](./Greddy_algorithm)
+* [Greedy algorithm](./Greedy_algorithm)
 <hr>
 
 * [Brute force](./Brute_force)
