@@ -9,7 +9,7 @@ Brief : Algorithm practice with C++:+1::+1:<br>
     * Back tracking 
   * [Kruskal](./Graph_searching_method/kruskalAlgorithm.cpp)
   
-<hr>
+<br>
 
 * [Graph Theory](./Graph_theory)
   * Union-find
@@ -21,7 +21,7 @@ Brief : Algorithm practice with C++:+1::+1:<br>
     * Segment Tree
     * Segment Tree with lazy propagation
     * Index Tree 
-<hr>
+<br>
 
 * [Sorting algorithm](./Sorting_algorithms)
   * insertion sort
@@ -32,33 +32,33 @@ Brief : Algorithm practice with C++:+1::+1:<br>
   * heap sort
   * couting sort
   * STL sort()
-<hr>
+<br>
 
 * [Dynamic Programming](./Dynamic_programming)
   * Lowest Common Ancestor(LCA)
   * Least Common Sequence(LCS) Dynamic programming version
 
-<hr>
+<br>
 
 * [Find shortest path](./Find_shortest_path)
   * Dijkstra
   * Floyd Warshall
-<hr>
+<br>
 
 * [Find prime number](./Find_prime_number)
   * Sieve of Eratosthenes
-<hr>
+<br>
 
 * [Pattern(string) matching](./Pattern(string)_matching)
   * Simple pattern matching
   * KMP
   * Rabin-Karp
-<hr>
+<br>
 
 * [Greedy algorithm](./Greedy_algorithm)
-<hr>
+<br>
 
 * [Brute force](./Brute_force)
   * Least Common Sequence(LCS) Brute force version
-<hr>
+<br>
 2021/08/16 ~
