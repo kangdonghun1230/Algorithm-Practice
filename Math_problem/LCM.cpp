@@ -25,7 +25,7 @@ int gcd(int a, int b) {
 	return a;
 }
 
-int lca(int a, int b) {
+int lcm(int a, int b) {
 	return a * b / gcd(a, b);
 }
 
