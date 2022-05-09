@@ -1,7 +1,12 @@
 # Algorithm-Practice
-Brief : Algorithm practice with C++:+1::+1:<br>
-\+ problem solving code (C++)
-<hr>
+### Brief : <br>
+Studying algorithm and problem solving with C++:+1::+1:<br>
+### Programming Language: <br>
+cpp, python
+### Duration: <br>
+2021/08/16 ~
+
+## Algorithm list
 
 * [Graph Searching algorithm](./Graph_searching_method)
   * [BFS](./Graph_searching_method/BFS.cpp)
@@ -60,5 +65,3 @@ Brief : Algorithm practice with C++:+1::+1:<br>
 
 * [Brute force](./Brute_force)
   * Least Common Sequence(LCS) Brute force version
-<br>
-2021/08/16 ~
